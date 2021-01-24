@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.data.mapper.ZcurdHeadBtnMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.etc.data.entity.ZcurdHeadBtn">
+        <id column="id" property="id" />
+        <result column="head_id" property="headId" />
+        <result column="btn_name" property="btnName" />
+        <result column="btn_icon" property="btnIcon" />
+        <result column="location" property="location" />
+        <result column="action" property="action" />
+        <result column="func_content" property="funcContent" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, head_id, btn_name, btn_icon, location, action, func_content, create_time
+    </sql>
+
+</mapper>

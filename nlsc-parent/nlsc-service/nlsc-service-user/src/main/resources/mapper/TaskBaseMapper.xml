@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.data.mapper.TaskBaseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.etc.data.entity.TaskBase">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="target_type" property="targetType" />
+        <result column="target_value" property="targetValue" />
+        <result column="cron" property="cron" />
+        <result column="last_run_result" property="lastRunResult" />
+        <result column="last_run_time" property="lastRunTime" />
+        <result column="last_run_time_cost" property="lastRunTimeCost" />
+        <result column="status" property="status" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, target_type, target_value, cron, last_run_result, last_run_time, last_run_time_cost, status, create_user_id, create_time
+    </sql>
+
+</mapper>

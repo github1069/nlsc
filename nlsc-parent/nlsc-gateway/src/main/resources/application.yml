@@ -1,0 +1,26 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: banana-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: banana-service-route
+          uri: lb://banana-user
+          predicates:
+            - Path=/user/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7070/eureka
+  instance:
+    prefer-ip-address: true
+management:
+  endpoint:
+    gateway:
+      enabled: true
+    web:
+      exposure:
+        include: true
+
